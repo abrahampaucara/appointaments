@@ -1,0 +1,26 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DB_NAME = exports.DB_PASS = exports.DB_USER = exports.DB_PORT = exports.DB_HOST = exports.DB_TYPE = exports.HOST = exports.PROTO = exports.PORT = void 0;
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config({ path: "./src/config/.env" });
+const PORT = process.env.PORT || 3000;
+exports.PORT = PORT;
+const PROTO = process.env.PROTO || "http";
+exports.PROTO = PROTO;
+const HOST = process.env.HOST || "localhost";
+exports.HOST = HOST;
+const DB_TYPE = process.env.DB_TYPE || "postgres";
+exports.DB_TYPE = DB_TYPE;
+const DB_HOST = process.env.DB_HOST || "localhost";
+exports.DB_HOST = DB_HOST;
+const DB_PORT = process.env.DB_PORT || 5432;
+exports.DB_PORT = DB_PORT;
+const DB_USER = process.env.DB_USER || "test";
+exports.DB_USER = DB_USER;
+const DB_PASS = process.env.DB_PASS || "test";
+exports.DB_PASS = DB_PASS;
+const DB_NAME = process.env.DB_NAME || "test";
+exports.DB_NAME = DB_NAME;
